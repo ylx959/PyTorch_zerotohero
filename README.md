@@ -1,4 +1,4 @@
-# Deep Learning 
+# Deep Learning(pytorch) 
 
 PyTorch 深度學習筆記，參考 [Learn PyTorch](https://www.learnpytorch.io/)。
 
