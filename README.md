@@ -33,12 +33,56 @@ pytorch_zerotohero/
 │   └── classification.ipynb   # Binary & multi-class classification
 ├── extra/
 │   └── cnn_pytorch.py         # CIFAR-10 CNN training: basic CNN vs. small ResNet
-├── requirements.txt
+├── pyproject.toml             # Project metadata & dependencies (uv)
+├── uv.lock                    # Locked dependency versions
+├── .python-version            # Python version pinned by uv
+├── requirements.txt           # Fallback for pip users
 └── README.md
 ```
 
-## Installation
+## How to start
+
+**1. Clone the repo**
 
 ```bash
-pip install -r requirements.txt
+git clone <repo-url>
+cd pytorch_zerotohero
+```
+
+**2. Install [uv](https://docs.astral.sh/uv/)** (skip if already installed)
+
+```bash
+# macOS / Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# or with Homebrew
+brew install uv
+```
+
+**3. Create the virtual environment and install dependencies**
+
+```bash
+uv sync
+```
+
+This reads `pyproject.toml` / `uv.lock`, downloads the pinned Python version if needed, and creates `.venv/` with all dependencies.
+
+**4. Launch Jupyter and open a notebook**
+
+```bash
+uv run jupyter notebook
+```
+
+To run the extra CIFAR-10 script instead:
+
+```bash
+uv run python extra/cnn_pytorch.py
+```
+
+`uv run` uses `.venv` automatically, so there's no need to activate it. If you prefer, you can still activate it manually with `source .venv/bin/activate` (macOS / Linux) or `.venv\Scripts\Activate.ps1` (Windows).
+
+**Adding a new package**
+
+```bash
+uv add <package>
 ```
