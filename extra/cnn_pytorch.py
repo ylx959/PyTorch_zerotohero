@@ -56,17 +56,21 @@ def get_dataloaders():
 
 
 class BasicCNN(nn.Module):
-    """Basic CNN：三層 convolution + 兩層 fully connected layer。"""
+    """Basic CNN：兩個 convolution block + 兩層 fully connected layer。"""
 
     def __init__(self):
         super().__init__()
-        # Feature extraction：convolution -> batch normalization -> ReLU -> max pooling
+        # 每一層：convolution -> batch normalization -> ReLU（-> max pooling）
         # Convolution 後接 BatchNorm 時，convolution 的 bias 是多餘的，所以設 bias=False
-        self.features = nn.Sequential(
+        # Block 1：兩層 convolution，每層後面 max pooling，spatial size 32 -> 8
+        self.block1 = nn.Sequential(
             nn.Conv2d(3, 32, 3, padding=1, bias=False),    # 3x32x32 -> 32x32x32
             nn.BatchNorm2d(32), nn.ReLU(), nn.MaxPool2d(2),  # -> 32x16x16
             nn.Conv2d(32, 64, 3, padding=1, bias=False),   # -> 64x16x16
             nn.BatchNorm2d(64), nn.ReLU(), nn.MaxPool2d(2),  # -> 64x8x8
+        )
+        # Block 2：一層 convolution，增加 channel 數，spatial size 維持 8x8
+        self.block2 = nn.Sequential(
             nn.Conv2d(64, 128, 3, padding=1, bias=False),  # -> 128x8x8
             nn.BatchNorm2d(128), nn.ReLU(),
         )
@@ -75,7 +79,9 @@ class BasicCNN(nn.Module):
                                         nn.ReLU(), nn.Linear(512, 10))
 
     def forward(self, x):
-        return self.classifier(self.features(x))  # 輸出原始 logits，不做 softmax（CrossEntropyLoss 內含）
+        x = self.block1(x)
+        x = self.block2(x)
+        return self.classifier(x)  # 輸出原始 logits，不做 softmax（CrossEntropyLoss 內含）
 
 
 class ResidualBlock(nn.Module):

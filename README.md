@@ -6,9 +6,9 @@ PyTorch deep learning notes, following [Learn PyTorch](https://www.learnpytorch.
 
 | # | Section | Core Skill Built | My Notebook | Status |
 |---|---------|------------------|-------------|--------|
-| `00` | **PyTorch Fundamentals** | Tensors, dtypes, shapes, matrix multiplication, indexing, reproducibility, GPU operations | 📓 [View](00-pytorch-fundamentals/tensors.ipynb) · [Exercises](00-pytorch-fundamentals/exercise.ipynb) | ✅ Done |
-| `01` | **PyTorch Workflow** | The end-to-end loop: data → model → loss → train → evaluate → save | 📓 [View](01-pytorch-workflow/workflow.ipynb) | ✅ Done |
-| `02` | **Neural Network Classification** | Binary & multi-class classification, non-linear activation functions, evaluation metrics | 📓 [View](02-pytorch-classification/classification.ipynb) | ✅ Done |
+| `00` | **PyTorch Fundamentals** | Tensors, dtypes, shapes, matrix multiplication, indexing, reproducibility, GPU operations | 📓 [View](notebooks/00-pytorch-fundamentals.ipynb) · [Exercises](notebooks/00-pytorch-fundamentals-exercise.ipynb) | ✅ Done |
+| `01` | **PyTorch Workflow** | The end-to-end loop: data → model → loss → train → evaluate → save | 📓 [View](notebooks/01-pytorch-workflow.ipynb) | ✅ Done |
+| `02` | **Neural Network Classification** | Binary & multi-class classification, non-linear activation functions, evaluation metrics | 📓 [View](notebooks/02-pytorch-classification.ipynb) | ✅ Done |
 | `03` | **Computer Vision** | CNNs, convolutional layers, pooling, feature maps | — | ⬜ Not started |
 | `04` | **Custom Datasets** | Loading real-world image data, custom `Dataset` classes, data augmentation | — | ⬜ Not started |
 | `05` | **Going Modular** | Turning notebook code into reusable Python scripts | — | ⬜ Not started |
@@ -24,13 +24,13 @@ PyTorch deep learning notes, following [Learn PyTorch](https://www.learnpytorch.
 
 ```
 pytorch_zerotohero/
-├── 00-pytorch-fundamentals/
-│   ├── tensors.ipynb          # Tensor fundamentals
-│   └── exercise.ipynb         # Chapter 00 exercises
-├── 01-pytorch-workflow/
-│   └── workflow.ipynb         # End-to-end PyTorch workflow
-├── 02-pytorch-classification/
-│   └── classification.ipynb   # Binary & multi-class classification
+├── notebooks/
+│   ├── 00-pytorch-fundamentals.ipynb           # Tensor fundamentals
+│   ├── 00-pytorch-fundamentals-exercise.ipynb  # Chapter 00 exercises
+│   ├── 01-pytorch-workflow.ipynb               # End-to-end PyTorch workflow
+│   ├── 02-pytorch-classification.ipynb         # Binary & multi-class classification
+│   ├── 03-pytorch-Computer-Vision.ipynb        # Computer vision with CNNs
+│   └── helper_functions.py                     # Helper functions from the course repo
 ├── extra/
 │   └── cnn_pytorch.py         # CIFAR-10 CNN training: basic CNN vs. small ResNet
 ├── pyproject.toml             # Project metadata & dependencies (uv)
