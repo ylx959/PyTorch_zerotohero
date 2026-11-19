@@ -9,8 +9,8 @@ PyTorch deep learning notes, following [Learn PyTorch](https://www.learnpytorch.
 | `00` | **PyTorch Fundamentals** | Tensors, dtypes, shapes, matrix multiplication, indexing, reproducibility, GPU operations | 📓 [View](notebooks/00-pytorch-fundamentals.ipynb) · [Exercises](notebooks/00-pytorch-fundamentals-exercise.ipynb) | ✅ Done |
 | `01` | **PyTorch Workflow** | The end-to-end loop: data → model → loss → train → evaluate → save | 📓 [View](notebooks/01-pytorch-workflow.ipynb) | ✅ Done |
 | `02` | **Neural Network Classification** | Binary & multi-class classification, non-linear activation functions, evaluation metrics | 📓 [View](notebooks/02-pytorch-classification.ipynb) | ✅ Done |
-| `03` | **Computer Vision** | CNNs, convolutional layers, pooling, feature maps | — | ⬜ Not started |
-| `04` | **Custom Datasets** | Loading real-world image data, custom `Dataset` classes, data augmentation | — | ⬜ Not started |
+| `03` | **Computer Vision** | CNNs, convolutional layers, pooling, feature maps | — | ✅ Done |
+| `04` | **Custom Datasets** | Loading real-world image data, custom `Dataset` classes, data augmentation | — | ✅ Done |
 | `05` | **Going Modular** | Turning notebook code into reusable Python scripts | — | ⬜ Not started |
 | `06` | **Transfer Learning** | Fine-tuning pretrained models on new data | — | ⬜ Not started |
 | `07` | **Experiment Tracking** | Tracking and comparing experiments with TensorBoard | — | ⬜ Not started |
