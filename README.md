@@ -11,7 +11,7 @@ PyTorch deep learning notes, following [Learn PyTorch](https://www.learnpytorch.
 | `02` | **Neural Network Classification** | Binary & multi-class classification, non-linear activation functions, evaluation metrics | 📓 [View](notebooks/02-pytorch-classification.ipynb) | ✅ Done |
 | `03` | **Computer Vision** | CNNs, convolutional layers, pooling, feature maps | — | ✅ Done |
 | `04` | **Custom Datasets** | Loading real-world image data, custom `Dataset` classes, data augmentation | — | ✅ Done |
-| `05` | **Going Modular** | Turning notebook code into reusable Python scripts | — | ⬜ Not started |
+| `05` | **Going Modular** | Turning notebook code into reusable Python scripts | — | ✅ Done |
 | `06` | **Transfer Learning** | Fine-tuning pretrained models on new data | — | ⬜ Not started |
 | `07` | **Experiment Tracking** | Tracking and comparing experiments with TensorBoard | — | ⬜ Not started |
 | `08` | **Paper Replicating** | Replicating a research paper (Vision Transformer) from scratch | — | ⬜ Not started |
